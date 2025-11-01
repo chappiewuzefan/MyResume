@@ -1,12 +1,12 @@
 title: "Zefan Wu"
 description: "Resume, blog posts, and notes by Zefan Wu."
 url: "https://chappiewuzefan.github.io"
-baseurl: "/MyResume"
+baseurl: "/zefan-site"
 author:
   name: "Zefan Wu"
   email: "zefanwu.it@gmail.com"
 github:
-  repository_url: "https://github.com/chappiewuzefan/MyResume"
+  repository_url: "https://github.com/chappiewuzefan/zefan-site"
 
 markdown: kramdown
 highlighter: rouge
@@ -34,4 +34,3 @@ exclude:
   - README.md
   - latexmkrc
   - .vscode
-

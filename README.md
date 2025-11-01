@@ -5,7 +5,7 @@
 最新版本的 PDF 保存在 `out/resume.pdf`，并通过 GitHub Pages 在线展示。
 
 - [下载 / 预览我的简历](out/resume.pdf)
-- 在线浏览网址：`https://chappiewuzefan.github.io/MyResume/`
+- 在线浏览网址：`https://chappiewuzefan.github.io/zefan-site/`
 
 仓库结构说明：
 
@@ -52,6 +52,6 @@ tags: [标签1, 标签2]
 ## GitHub Pages 配置
 
 1. 在仓库的 **Settings → Pages** 中，将 **Source** 设置为 `Deploy from a branch`，选择 `main` 分支、`/ (root)` 文件夹。
-2. 保存后等待几分钟，GitHub 会自动构建静态站点，最终访问 `https://<你的用户名>.github.io/MyResume/` 即可在线查看简历。
+2. 保存后等待几分钟，GitHub 会自动构建静态站点，最终访问 `https://<你的用户名>.github.io/zefan-site/` 即可在线查看简历。
 
 > `resume.html` 会嵌入 `out/resume.pdf` 并展示留言板（Giscus）。只要同步更新 PDF 并推送，页面就会保持最新内容。留言会同步到仓库的 Discussions。
