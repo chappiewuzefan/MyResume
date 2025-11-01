@@ -1,0 +1,53 @@
+{
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.outDir": "out",
+
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk (xelatex)",
+      "command": "/Library/TeX/texbin/latexmk",
+      "args": [
+        "-xelatex",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "biber",
+      "command": "/Library/TeX/texbin/biber",
+      "args": ["%DOCFILE%"]
+    },
+    {
+      "name": "xelatex",
+      "command": "/Library/TeX/texbin/xelatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    }
+  ],
+
+  "latex-workshop.latex.recipes": [
+    { "name": "latexmk xelatex", "tools": ["latexmk (xelatex)"] },
+    { "name": "xelatex ➜ biber ➜ xelatex×2", "tools": ["xelatex", "biber", "xelatex", "xelatex"] }
+  ],
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux","*.bbl","*.blg","*.bcf","*.run.xml",
+    "*.fdb_latexmk","*.fls","*.log","*.xdv","*.synctex.gz"
+  ],
+  // 让 LaTeX Workshop 负责格式化
+  "latex-workshop.formatting.latex": "latexindent",
+  // 指定 latexindent 路径（来自 MacTeX）
+  "latex-workshop.formatting.latexindent.path": "/Library/TeX/texbin/latexindent",
+  // 仅针对 LaTeX 启用保存自动格式化
+  "[latex]": {
+    "editor.defaultFormatter": "James-Yu.latex-workshop",
+    "editor.formatOnSave": false
+  }
+}
