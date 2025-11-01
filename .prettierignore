@@ -1,0 +1,10 @@
+node_modules/
+_site/
+out/
+.jekyll-cache/
+Gemfile.lock
+package-lock.json
+**/*.html
+**/*.liquid
+**/*.cls
+resume.tex

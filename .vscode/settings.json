@@ -23,12 +23,7 @@
     {
       "name": "xelatex",
       "command": "/Library/TeX/texbin/xelatex",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "%DOC%"
-      ]
+      "args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"]
     }
   ],
 
@@ -38,8 +33,16 @@
   ],
   "latex-workshop.latex.autoBuild.run": "onSave",
   "latex-workshop.latex.clean.fileTypes": [
-    "*.aux","*.bbl","*.blg","*.bcf","*.run.xml",
-    "*.fdb_latexmk","*.fls","*.log","*.xdv","*.synctex.gz"
+    "*.aux",
+    "*.bbl",
+    "*.blg",
+    "*.bcf",
+    "*.run.xml",
+    "*.fdb_latexmk",
+    "*.fls",
+    "*.log",
+    "*.xdv",
+    "*.synctex.gz"
   ],
   // 让 LaTeX Workshop 负责格式化
   "latex-workshop.formatting.latex": "latexindent",
@@ -49,5 +52,17 @@
   "[latex]": {
     "editor.defaultFormatter": "James-Yu.latex-workshop",
     "editor.formatOnSave": false
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   }
 }

@@ -1,0 +1,14 @@
+{
+  "name": "zefan-site",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "lint:md": "markdownlint .",
+    "format": "prettier --write \"**/*.{md,json,yml,yaml}\"",
+    "format:check": "prettier --check \"**/*.{md,json,yml,yaml}\""
+  },
+  "devDependencies": {
+    "markdownlint-cli": "^0.39.0",
+    "prettier": "^3.2.5"
+  }
+}
