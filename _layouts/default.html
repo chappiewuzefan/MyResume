@@ -167,7 +167,7 @@
       }
       .resume-viewer,
       #comments {
-        width: 100%;
+        width: min(88vw, 1100px);
         margin: 0 auto;
       }
       .resume-viewer {
@@ -226,6 +226,7 @@
         }
         .resume-viewer {
           height: min(75vh, 600px);
+          width: min(92vw, 900px);
           border-radius: 0;
           box-shadow: none;
         }
@@ -262,7 +263,7 @@
         <div class="footer-meta">
           <span id="site-uptime">Online for 0 days</span>
           <span class="dot">•</span>
-          <span id="page-views">Loading views…</span>
+          <span id="page-views">Analytics tracked via Cloudflare</span>
         </div>
         <div>
           © {{ site.time | date: '%Y' }} {{ site.title }} · Crafted with LaTeX, Jekyll, and a healthy dose of curiosity.
