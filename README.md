@@ -7,7 +7,7 @@ This repository hosts three things in one place:
 3. A lightweight Jekyll blog built from Markdown posts.
 
 Latest resume PDF: [`out/resume.pdf`](out/resume.pdf)  
-Live site: <https://chappiewuzefan.github.io/zefan-site/>
+Live site: <https://zefanwu.com/>
 
 ---
 
@@ -69,7 +69,7 @@ Then browse to <http://127.0.0.1:4000/zefan-site/>.
 ## GitHub Pages Deployment
 
 1. In **Settings → Pages**, set the source to `Deploy from a branch`, branch `main`, folder `/ (root)`.
-2. Every push triggers a new Jekyll build. The production site is served from <https://chappiewuzefan.github.io/zefan-site/>.
+2. Every push triggers a new Jekyll build. The production site is served from <https://zefanwu.com/>.
 
 `resume.html` embeds the compiled PDF, shows a running site uptime label, and exposes a “Resume Message Board”. Messages are stored as GitHub Discussions under the repository. Visitor statistics are collected via [Busuanzi](https://busuanzi.ibruce.info/) and displayed in the footer.
 
