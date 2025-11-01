@@ -6,12 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
     {% seo %}
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-      integrity="sha256-g7PikoaGeH6R2WZ0NHVw+Zn3CWcbgE2p48uemQpTDfY="
-      crossorigin="anonymous"
-    />
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
     <style>
       :root {
@@ -153,30 +147,149 @@
         color: var(--muted);
         margin-bottom: 0.6rem;
       }
-      .social-links {
-        display: inline-flex;
+      .hero-card {
+        position: relative;
+        margin: 0 auto;
+        width: min(92vw, 900px);
+        padding: clamp(2.4rem, 5vw, 3.4rem);
+        border-radius: 28px;
+        border: 1px solid rgba(123, 213, 255, 0.2);
+        background: radial-gradient(circle at 0% 0%, rgba(123, 213, 255, 0.24), transparent 45%),
+          radial-gradient(circle at 80% -20%, rgba(123, 213, 255, 0.18), transparent 45%),
+          linear-gradient(135deg, rgba(18, 26, 42, 0.92), rgba(12, 16, 26, 0.9));
+        box-shadow: 0 40px 80px rgba(8, 12, 24, 0.55);
+        backdrop-filter: blur(16px);
+        display: grid;
+        gap: clamp(1.6rem, 4vw, 2.8rem);
+        overflow: hidden;
+      }
+      .hero-card a {
+        color: var(--accent);
+      }
+      .hero-header {
+        display: grid;
         gap: 0.75rem;
-        margin-top: 1.2rem;
+        max-width: 60ch;
+      }
+      .hero-pretitle {
+        text-transform: uppercase;
+        letter-spacing: 0.38em;
+        font-size: 0.75rem;
+        color: rgba(235, 243, 255, 0.6);
+        margin: 0;
+      }
+      .hero-header h1 {
+        margin: 0;
+        font-size: clamp(2.2rem, 7vw, 3rem);
+        color: #fdfdfd;
+        letter-spacing: 0.02em;
+      }
+      .hero-subtitle {
+        margin: 0;
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: rgba(225, 232, 244, 0.82);
+      }
+      .hero-highlights {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 1rem;
+        max-width: 64ch;
+      }
+      .hero-highlights li {
+        position: relative;
+        padding-left: 1.9rem;
+        font-size: 1.02rem;
+        line-height: 1.7;
+        color: rgba(230, 236, 248, 0.92);
+      }
+      .hero-highlights li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.65rem;
+        width: 0.55rem;
+        height: 0.55rem;
+        background: var(--accent);
+        border-radius: 999px;
+        box-shadow: 0 0 10px rgba(123, 213, 255, 0.9);
+      }
+      .hero-highlights strong {
+        color: #ffffff;
+      }
+      .hero-highlights span {
+        color: rgba(210, 221, 239, 0.86);
+      }
+      .hero-note {
+        margin: 0;
+        font-size: 0.95rem;
+        color: rgba(192, 205, 225, 0.75);
+      }
+      .hero-divider {
+        height: 1px;
+        width: 100%;
+        background: linear-gradient(90deg, rgba(123, 213, 255, 0), rgba(123, 213, 255, 0.45), rgba(123, 213, 255, 0));
+      }
+      .hero-connect {
+        display: grid;
+        gap: 0.9rem;
+      }
+      .hero-connect h2 {
+        margin: 0;
+        font-size: 1.2rem;
+        color: rgba(236, 244, 255, 0.95);
+      }
+      .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9rem;
       }
       .social-links a {
         display: inline-flex;
         align-items: center;
-        gap: 0.5rem;
-        padding: 0.5rem 1.2rem;
-        border-radius: 999px;
-        background: rgba(123, 213, 255, 0.16);
-        color: #e8eaed;
-        font-size: 0.95rem;
+        gap: 0.6rem;
+        padding: 0.6rem 1.35rem;
+        border-radius: 14px;
+        background: rgba(16, 22, 34, 0.82);
+        border: 1px solid rgba(123, 213, 255, 0.22);
+        color: rgba(225, 235, 250, 0.9);
+        font-size: 0.96rem;
         font-weight: 600;
-        transition: background 0.2s ease, transform 0.2s ease;
+        letter-spacing: 0.01em;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        box-shadow: 0 16px 32px rgba(9, 13, 23, 0.45);
       }
       .social-links a:hover {
-        background: rgba(123, 213, 255, 0.28);
-        transform: translateY(-1px);
+        border-color: rgba(123, 213, 255, 0.6);
+        box-shadow: 0 20px 48px rgba(10, 18, 36, 0.55);
+        transform: translateY(-3px) scale(1.02);
+        color: #f5fbff;
       }
-      .social-links img {
-        width: 1.15rem;
-        height: 1.15rem;
+      .social-icon {
+        width: 1.2rem;
+        height: 1.2rem;
+        display: inline-block;
+        background-color: currentColor;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+      }
+      .icon-github {
+        mask-image: url("{{ '/assets/icons/github.svg' | relative_url }}");
+        -webkit-mask-image: url("{{ '/assets/icons/github.svg' | relative_url }}");
+      }
+      .icon-linkedin {
+        mask-image: url("{{ '/assets/icons/linkedin.svg' | relative_url }}");
+        -webkit-mask-image: url("{{ '/assets/icons/linkedin.svg' | relative_url }}");
+      }
+      .icon-email {
+        mask-image: url("{{ '/assets/icons/email.svg' | relative_url }}");
+        -webkit-mask-image: url("{{ '/assets/icons/email.svg' | relative_url }}");
       }
       article.blog-post {
         line-height: 1.7;
@@ -268,6 +381,31 @@
         #comments {
           width: 100%;
           padding: 1.5rem 0 0;
+        }
+        .hero-card {
+          width: min(96vw, 720px);
+          padding: 2rem;
+          gap: 1.5rem;
+        }
+        .hero-pretitle {
+          letter-spacing: 0.28em;
+        }
+        .hero-subtitle {
+          font-size: 0.98rem;
+        }
+        .hero-highlights li {
+          padding-left: 1.6rem;
+          font-size: 0.97rem;
+        }
+        .hero-connect h2 {
+          font-size: 1.1rem;
+        }
+        .social-links {
+          gap: 0.75rem;
+        }
+        .social-links a {
+          width: 100%;
+          justify-content: center;
         }
       }
     </style>
