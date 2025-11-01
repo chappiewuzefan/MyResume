@@ -28,12 +28,13 @@ Latest resume PDF: [`out/resume.pdf`](out/resume.pdf)
 | Path / Item | Description |
 | --- | --- |
 | `_config.yml` | Site metadata, base URL, plugins (`jekyll-feed`, `jekyll-seo-tag`), permalink rules. |
-| `_layouts/` | Layout templates: `default` (global shell + styles + icons), `page`, `post`, `blog`, `resume`. |
+| `_layouts/` | Layout templates: `default` (global shell + styles + icon link), `page`, `post`, `blog`, `resume`. |
 | `_posts/` | Markdown posts named `YYYY-MM-DD-title.md`. |
 | `blog/index.md` | Blog landing page using the `blog` layout to list recent posts. |
 | `index.md` | Landing page with a short intro and social links. |
 | `resume.html` | Resume route that embeds `out/resume.pdf`, displays uptime, and mounts the Giscus message board. |
 | `CNAME` | Custom domain mapping for GitHub Pages (`zefanwu.com`). |
+| `assets/icons/` | SVG icons used by the Connect buttons on the home page. |
 
 ### Tooling & automation
 
