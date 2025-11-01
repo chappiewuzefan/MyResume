@@ -245,8 +245,9 @@
       <div class="container inner">
         <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
         <nav class="site-nav">
+          <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
           <a href="{{ '/resume/' | relative_url }}" {% if page.url == '/resume/' %}class="active"{% endif %}>Resume</a>
-          <a href="{{ '/' | relative_url }}" {% if page.url == '/' or page.url contains '/blog/' %}class="active"{% endif %}>Blog</a>
+          <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog/' %}class="active"{% endif %}>Blog</a>
           <a href="{{ site.github.repository_url }}" target="_blank" rel="noopener">Repository</a>
         </nav>
       </div>
