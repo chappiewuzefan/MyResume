@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
     {% seo %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTX0BPc4Y9lOeG6m1cS7P7KME76Lw8fQ2G3SEvGN9VOGBev5nYe1w1x3fjTJ4RJ6cGZBxz1Kg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
     <style>
       :root {
@@ -155,10 +156,10 @@
       .social-links a {
         display: inline-flex;
         align-items: center;
-        justify-content: center;
-        padding: 0.45rem 1.1rem;
+        gap: 0.5rem;
+        padding: 0.5rem 1.2rem;
         border-radius: 999px;
-        background: rgba(123, 213, 255, 0.18);
+        background: rgba(123, 213, 255, 0.16);
         color: #e8eaed;
         font-size: 0.95rem;
         font-weight: 600;
@@ -167,6 +168,9 @@
       .social-links a:hover {
         background: rgba(123, 213, 255, 0.28);
         transform: translateY(-1px);
+      }
+      .social-links i {
+        font-size: 1.05rem;
       }
       article.blog-post {
         line-height: 1.7;

@@ -23,7 +23,16 @@ Expect the home page to grow with project highlights and quick links as I ship m
 ### Connect
 
 <div class="social-links">
-  <a href="https://github.com/chappiewuzefan" target="_blank" rel="noopener">GitHub</a>
-  <a href="https://www.linkedin.com/in/zefan-wu/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="mailto:zefanwu.it@gmail.com">Email</a>
+  <a href="https://github.com/chappiewuzefan" target="_blank" rel="noopener">
+    <i class="fa-brands fa-github"></i>
+    <span>GitHub</span>
+  </a>
+  <a href="https://www.linkedin.com/in/zefan-wu/" target="_blank" rel="noopener">
+    <i class="fa-brands fa-linkedin"></i>
+    <span>LinkedIn</span>
+  </a>
+  <a href="mailto:zefanwu.it@gmail.com">
+    <i class="fa-solid fa-envelope"></i>
+    <span>Email</span>
+  </a>
 </div>

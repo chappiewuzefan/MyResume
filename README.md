@@ -45,6 +45,7 @@ Latest resume PDF: [`out/resume.pdf`](out/resume.pdf)
 | `.markdownlint.jsonc` / `.markdownlintignore` | Markdown lint rules & ignore list. |
 | `.prettierrc.json` / `.prettierignore` | Prettier configuration & ignore list. |
 | `.vscode/settings.json` | Workspace defaults: LaTeX output directory, format-on-save with Prettier for Markdown/JSON/YAML. |
+| `.gitignore` | Keeps build artifacts (e.g., `node_modules/`, `_site/`, `out/`) and logs out of version control. |
 | `profile.png` | Optional avatar referenced by the LaTeX class. |
 
 ---
@@ -102,7 +103,7 @@ Available scripts:
 - `npm run format` – run Prettier on Markdown / JSON / YAML using `.prettierrc.json`.
 - `npm run format:check` – verify formatting without writing changes (useful in CI).
 
-VS Code’s workspace settings enable format-on-save for Markdown/JSON/YAML via Prettier and keep LaTeX formatting managed by LaTeX Workshop.
+VS Code’s workspace settings (see `.vscode/settings.json`) enable format-on-save for Markdown/JSON/YAML via Prettier—just hit save and formatting is applied automatically. LaTeX files continue to use LaTeX Workshop’s formatter.
 
 ---
 
