@@ -13,3 +13,13 @@ I build reliable backend systems, keep fleets of IoT devices in line, and occasi
 - **Source** – the entire site (including LaTeX sources) is open on GitHub: [{{ site.github.repository_url }}]({{ site.github.repository_url }}).
 
 Expect the home page to grow with project highlights and quick links as I ship more things.
+
+---
+
+### Connect
+
+<div class="social-links">
+  <a href="https://github.com/chappiewuzefan" target="_blank" rel="noopener">GitHub</a>
+  <a href="https://www.linkedin.com/in/zefan-wu/" target="_blank" rel="noopener">LinkedIn</a>
+  <a href="mailto:zefanwu.it@gmail.com">Email</a>
+</div>
