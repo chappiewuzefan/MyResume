@@ -298,12 +298,19 @@
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         const pvTarget = document.getElementById('page-views');
+        let fallbackTimer = setTimeout(() => {
+          if (pvTarget && pvTarget.textContent === 'Loading views…') {
+            pvTarget.textContent = 'Stats unavailable (blocked?)';
+          }
+        }, 7000);
+
         function applyBusuanzi() {
           if (typeof window.busuanzi !== 'undefined') {
             const pv = document.getElementById('busuanzi_value_site_pv');
             const uv = document.getElementById('busuanzi_value_site_uv');
-            if (pv && uv) {
+            if (pv && uv && pv.textContent) {
               pvTarget.textContent = `Visits: ${pv.textContent} · Visitors: ${uv.textContent}`;
+              clearTimeout(fallbackTimer);
               return true;
             }
           }
