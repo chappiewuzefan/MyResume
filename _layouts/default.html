@@ -294,36 +294,8 @@
         setInterval(updateUptime, 60000);
       })();
     </script>
-    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const pvTarget = document.getElementById('page-views');
-        let fallbackTimer = setTimeout(() => {
-          if (pvTarget && pvTarget.textContent === 'Loading views…') {
-            pvTarget.textContent = 'Stats unavailable (blocked?)';
-          }
-        }, 7000);
-
-        function applyBusuanzi() {
-          if (typeof window.busuanzi !== 'undefined') {
-            const pv = document.getElementById('busuanzi_value_site_pv');
-            const uv = document.getElementById('busuanzi_value_site_uv');
-            if (pv && uv && pv.textContent) {
-              pvTarget.textContent = `Visits: ${pv.textContent} · Visitors: ${uv.textContent}`;
-              clearTimeout(fallbackTimer);
-              return true;
-            }
-          }
-          return false;
-        }
-        const observer = new MutationObserver(applyBusuanzi);
-        observer.observe(document.body, { childList: true, subtree: true });
-        applyBusuanzi();
-      });
-    </script>
-    <span id="busuanzi_container_site_pv" style="display:none;"></span>
-    <span id="busuanzi_value_site_pv" style="display:none;"></span>
-    <span id="busuanzi_container_site_uv" style="display:none;"></span>
-    <span id="busuanzi_value_site_uv" style="display:none;"></span>
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0a0fe53f35664ac9bcf200c83d72582a"}'></script>
+    <!-- End Cloudflare Web Analytics -->
   </body>
 </html>
