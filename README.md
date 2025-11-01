@@ -3,7 +3,7 @@
 最新版本的 PDF 保存在仓库的 `out/resume.pdf`，并通过 GitHub Pages 在线展示。
 
 - [下载 / 预览我的简历](out/resume.pdf)
-- 在线浏览网址（启用 GitHub Pages 后）：`https://chappiewuzefan.github.io/MyResume/`
+- 在线浏览网址：`https://chappiewuzefan.github.io/MyResume/`
 
 仓库结构说明：
 
